@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{b1758cbf-2263-412f-9e00-1b27f953eb0b}</ProjectGuid>
-    <RootNamespace>TokenDump</RootNamespace>
+    <ProjectGuid>{66704ff5-8962-42fa-8b22-51d207a0853f}</ProjectGuid>
+    <RootNamespace>CreateRemoteThreadShellcode</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -116,6 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)CreateRemoteThread DLL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,29 +140,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="ElevationHelp.h" />
-    <ClInclude Include="ErrorHandling.h" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="TokenPolicy.h" />
-    <ClInclude Include="TokenSandBoxInert.h" />
-    <ClInclude Include="TokenSessionId.h" />
-    <ClInclude Include="TokenStatistics.h" />
-    <ClInclude Include="TokenUIAccess.h" />
-    <ClInclude Include="TokenVirtualization.h" />
-    <ClInclude Include="ProcessDetails.h" />
-    <ClInclude Include="TokenElevation.h" />
-    <ClInclude Include="TokenGroup.h" />
-    <ClInclude Include="TokenOwner.h" />
-    <ClInclude Include="TokenPrimaryGroup.h" />
-    <ClInclude Include="TokenPrivilege.h" />
-    <ClInclude Include="TokenRestriction.h" />
-    <ClInclude Include="TokenSource.h" />
-    <ClInclude Include="TokenType.h" />
-    <ClInclude Include="TokenUser.h" />
-    <ClInclude Include="Utils.h" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp" />
+    <ClInclude Include="..\CreateRemoteThread DLL\pch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
